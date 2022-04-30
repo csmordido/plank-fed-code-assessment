@@ -1,11 +1,11 @@
 import useApiResponse from "../hooks/useApiResponse";
 
-const Header = () => {
+const Header = ({ setActiveCategory }) => {
   const categoriesArr = useApiResponse('categories');
 
   const renderCategories = () => {
     return categoriesArr.map((category, index) => {
-      return <li key={index}><button type="button">{category.title}</button></li>
+      return <li key={index}><button type="button" value={category.slug}>{category.title}</button></li>
     });
   };
 
@@ -13,8 +13,8 @@ const Header = () => {
     <header>
       <h1>Work</h1>
       <nav>
-        <ul>
-          <li><button type="button">All</button></li>
+        <ul onClick={ (event) => {setActiveCategory(event.target.value)} }>
+          <li><button type="button" value="all">All</button></li>
           {renderCategories()}
         </ul>
       </nav>

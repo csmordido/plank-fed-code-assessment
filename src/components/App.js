@@ -1,15 +1,16 @@
 import '../styles/App.scss';
-import useApiResponse from '../hooks/useApiResponse';
+import { useState } from 'react';
 import Wrapper from './Wrapper';
 import Header from './Header';
+import CaseStudies from './CaseStudies';
 
 const App = () => {
-  const caseStudiesArr = useApiResponse('case-studies');
-  
+  const [activeCategory, setActiveCategory] = useState('all');
 
   return (
     <Wrapper>
-      <Header />
+      <Header setActiveCategory={setActiveCategory}/>
+      <CaseStudies activeCategory={activeCategory}/>
     </Wrapper>
   )
 }
