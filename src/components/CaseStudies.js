@@ -17,20 +17,20 @@ const CaseStudies = ({ activeCategory }) => {
       });
     } else {
       const filteredCaseStudiesArr = filterCaseStudies();
-      return filteredCaseStudiesArr.map(caseStudy => {
-        return <CaseStudy caseStudy={caseStudy} key={caseStudy.id}/>
-      });
+      if (filteredCaseStudiesArr.length) {
+        return filteredCaseStudiesArr.map(caseStudy => {
+          return <CaseStudy caseStudy={caseStudy} key={caseStudy.id}/>
+        });
+      } else {
+        return <EmptyCategory text="There are currently no case studies in this category."/>
+      }
     }
   }
 
   return (
     <main>
       <ul id='case-studies-container'>
-        {
-          renderCaseStudies().length 
-          ? renderCaseStudies() 
-          : <EmptyCategory text="There are currently no case studies in this category."/>
-        }
+        {renderCaseStudies()}
       </ul>
     </main>
   )

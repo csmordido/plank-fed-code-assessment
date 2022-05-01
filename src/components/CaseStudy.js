@@ -3,8 +3,9 @@ import placeholder from '../assets/placeholder-image.jpg';
 import '../styles/CaseStudy.scss';
 
 const CaseStudy = ({ caseStudy }) => {
+
   return (
-    <li className='case-study'>
+    <li className='case-study' data-aos='fade-up'>
       <figure className='case-study-img'>
         <img src={caseStudy.thumbnail || placeholder} alt={caseStudy.title}/>
       </figure>
