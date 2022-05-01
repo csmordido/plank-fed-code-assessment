@@ -15,8 +15,8 @@ const CaseStudy = ({ caseStudy }) => {
         <div className='case-study-link-container'>
           <a href={caseStudy.link} className='case-study-link'>
             View case study
+            <Arrow className='case-study-link-arrow'/>
           </a>
-          <Arrow className='case-study-link-arrow'/>
         </div>
       </div>
     </li>

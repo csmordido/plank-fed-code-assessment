@@ -1,5 +1,6 @@
 import useApiResponse from '../hooks/useApiResponse';
 import CaseStudy from './CaseStudy';
+import '../styles/CaseStudies.scss';
 
 const CaseStudies = ({ activeCategory }) => {
   const caseStudiesArr = useApiResponse('case-studies');

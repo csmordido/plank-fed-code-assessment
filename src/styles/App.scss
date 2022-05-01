@@ -7,7 +7,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 img { width: 100%; display: block; }
 
 html {
+  background-image: url(../assets/asset2.svg), url(../assets/asset3.svg), url(../assets/asset1.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: right top, left bottom, right bottom;
   background-color: $black;
+  background-size: 50%, 50%, 20%;
   color: $white;
   font-size: 100%;
   font-family: $primary-font;

@@ -9,11 +9,6 @@
 }
 
 #category-buttons-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 1rem;
-  row-gap: 1rem;
   padding-bottom: 1.375rem;
   border-bottom: 2px solid $white;
   margin-bottom: 3.875rem;
@@ -27,8 +22,13 @@
   text-transform: uppercase;
   text-align: center;
   background-color: transparent;
-  border-radius: none;
+  border-radius: unset;
   box-shadow: unset;
   padding: 0.3175rem 1.3rem;
-  border: 1px solid $true-white;
+  border: unset;
+  width: 100%;
+
+  &.active {
+    border: 1px solid $true-white;
+  }
 }

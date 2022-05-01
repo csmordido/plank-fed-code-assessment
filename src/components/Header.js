@@ -15,7 +15,7 @@ const Header = ({ setActiveCategory }) => {
       <h1 id='page-title'>Work</h1>
       <nav>
         <ul id='category-buttons-container' onClick={ (event) => {setActiveCategory(event.target.value)} }>
-          <li><button className='category-button' type="button" value="all">All</button></li>
+          <li><button className='category-button active' type="button" value="all">All</button></li>
           {renderCategories()}
         </ul>
       </nav>
