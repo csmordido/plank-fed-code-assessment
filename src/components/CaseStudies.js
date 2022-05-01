@@ -1,5 +1,6 @@
 import useApiResponse from '../hooks/useApiResponse';
 import CaseStudy from './CaseStudy';
+import EmptyCategory from './EmptyCategory';
 import '../styles/CaseStudies.scss';
 
 const CaseStudies = ({ activeCategory }) => {
@@ -28,7 +29,7 @@ const CaseStudies = ({ activeCategory }) => {
         {
           renderCaseStudies().length 
           ? renderCaseStudies() 
-          : <li>No items</li> 
+          : <EmptyCategory text="There are currently no case studies in this category"/>
         }
       </ul>
     </main>
