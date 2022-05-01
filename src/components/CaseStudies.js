@@ -1,5 +1,5 @@
-import useApiResponse from "../hooks/useApiResponse";
-import CaseStudy from "./CaseStudy";
+import useApiResponse from '../hooks/useApiResponse';
+import CaseStudy from './CaseStudy';
 
 const CaseStudies = ({ activeCategory }) => {
   const caseStudiesArr = useApiResponse('case-studies');
