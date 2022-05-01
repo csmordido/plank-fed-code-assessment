@@ -1,5 +1,6 @@
 import { ReactComponent as Arrow } from '../assets/arrow-icon.svg';
 import placeholder from '../assets/placeholder-image.jpg';
+import '../styles/CaseStudy.scss';
 
 const CaseStudy = ({ caseStudy }) => {
   return (
@@ -11,10 +12,12 @@ const CaseStudy = ({ caseStudy }) => {
         <h2 className='case-study-category'>{caseStudy.categories[0].title}</h2>
         <h3 className='case-study-title'>{caseStudy.title}</h3>
         <figcaption className='case-study-text'>{caseStudy.excerpt}</figcaption>
-        <a href={caseStudy.link} className='case-study-link'>
-          View case study
-          <Arrow />
-        </a>
+        <div className='case-study-link-container'>
+          <a href={caseStudy.link} className='case-study-link'>
+            View case study
+          </a>
+          <Arrow className='case-study-link-arrow'/>
+        </div>
       </div>
     </li>
   )
