@@ -1,4 +1,5 @@
 @import '../styles/variables.scss';
+$row-layout-min-bp: 970px;
 
 .case-study {
   margin-bottom: 4.625rem;
@@ -7,15 +8,34 @@
     margin-bottom: unset;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $mobile-min) {
     max-width: 448px;
     width: 100%;
-    flex-basis: calc(50% - 0.5rem);
+    flex-basis: calc(50% - 1rem);
+  }
+
+  @media screen and (min-width: $row-layout-min-bp) {
+    max-width: 601px;
+    flex-basis: calc(50% - 1rem);
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
   }
 }
 
 .case-study-img {
   margin-bottom: 1rem;
+
+  @media screen and (min-width: $row-layout-min-bp) {
+    margin-bottom: unset;
+    flex-basis: 33%;
+  }
+}
+
+.case-study-details {
+  @media screen and (min-width: $row-layout-min-bp) {
+    flex-basis: 66%;
+  }
 }
 
 .case-study-category {

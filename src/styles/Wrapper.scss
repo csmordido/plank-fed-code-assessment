@@ -1,15 +1,22 @@
+@import '../styles/variables.scss';
+$max-width: 1280px;
+
 #wrapper {
   max-width: 448px;
   margin: 0 auto;
   width: 100%;
   padding: 20% 6%;
 
-  @media screen and (min-width: 768px) and (max-width: 939px) {
-    max-width: 1280px;
+  @media screen and (min-width: $mobile-min) and (max-width: $tablet-max) {
+    max-width: $max-width;
   }
 
-  @media screen and (min-width: 940px) {
-    max-width: 1280px;
+  @media screen and (min-width: $desktop-min) {
+    max-width: $max-width;
     padding: 6%;
+  }
+
+  @media screen and (min-width: $max-width) {
+    padding: 6% 0;
   }
 }

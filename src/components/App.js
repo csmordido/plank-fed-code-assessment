@@ -9,7 +9,10 @@ const App = () => {
 
   return (
     <Wrapper>
-      <Header setActiveCategory={setActiveCategory}/>
+      <Header 
+        setActiveCategory={setActiveCategory}
+        activeCategory={activeCategory}
+      />
       <CaseStudies activeCategory={activeCategory}/>
     </Wrapper>
   )
