@@ -16,7 +16,7 @@ const useApiResponse = (endPoint) => {
     };
 
     getResponse();
-  }, []);
+  }, [endPoint]);
 
   return response;
 }

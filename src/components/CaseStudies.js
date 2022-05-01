@@ -29,7 +29,7 @@ const CaseStudies = ({ activeCategory }) => {
         {
           renderCaseStudies().length 
           ? renderCaseStudies() 
-          : <EmptyCategory text="There are currently no case studies in this category"/>
+          : <EmptyCategory text="There are currently no case studies in this category."/>
         }
       </ul>
     </main>
