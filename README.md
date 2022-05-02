@@ -7,7 +7,7 @@ A React web app previewing some of [Plank](https://plankdesign.com/en/)'s case s
 - [Sass](https://www.npmjs.com/package/sass)
 
 - [AOS](https://github.com/michalsnik/aos)
-  The Animate on Scroll library provides simple configurations for implementing scroll animations in React.
+  - The Animate on Scroll library provides simple configurations for implementing scroll animations in React.
 
 - [Axios](https://www.npmjs.com/package/axios)
 

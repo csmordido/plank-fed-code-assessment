@@ -11,11 +11,13 @@ const CaseStudies = ({ activeCategory }) => {
   }
 
   const renderCaseStudies = () => {
+    // if the selected category is "All", return all the case studies
     if (activeCategory === 'all') {
       return caseStudiesArr.map(caseStudy => {
         return <CaseStudy caseStudy={caseStudy} key={caseStudy.id}/>
       });
     } else {
+      // otherwise, filter the case studies array
       const filteredCaseStudiesArr = filterCaseStudies();
       if (filteredCaseStudiesArr.length) {
         return filteredCaseStudiesArr.map(caseStudy => {

@@ -9,10 +9,11 @@ const Header = ({ setActiveCategory, activeCategory }) => {
       title: "All",
       slug: "all",
     }
-  
+    // adds an "All" category to the categories array
     const combinedCategoriesArr = [allCategory, ...categoriesArr];
 
     return combinedCategoriesArr.map((category) => {
+      // determines the active category to remove or add the 'active' class
       const isActive = activeCategory === category.slug ? 'active' : '';
       return <li key={category.slug}><button className={`category-button ${isActive}`} type="button" value={category.slug}>{category.title}</button></li>
     });
