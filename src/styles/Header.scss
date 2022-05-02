@@ -32,10 +32,13 @@ $row-layout-min-bp: 970px;
   border-radius: unset;
   box-shadow: unset;
   padding: 0.3175rem 1.3rem;
-  border: unset;
+  border: 1px solid transparent;
   width: 100%;
+  transition: border 0.3s ease-in-out;
 
-  &.active {
+  &.active,
+  &:hover,
+  &:focus {
     border: 1px solid $true-white;
   }
 }

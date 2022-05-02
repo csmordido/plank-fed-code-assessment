@@ -34,7 +34,6 @@ const CaseStudies = ({ activeCategory }) => {
       </ul>
     </main>
   )
-
 }
 
 export default CaseStudies;

@@ -12,9 +12,9 @@ const Header = ({ setActiveCategory, activeCategory }) => {
   
     const combinedCategoriesArr = [allCategory, ...categoriesArr];
 
-    return combinedCategoriesArr.map((category, index) => {
+    return combinedCategoriesArr.map((category) => {
       const isActive = activeCategory === category.slug ? 'active' : '';
-      return <li key={index} data-aos='fade'><button className={`category-button ${isActive}`} type="button" value={category.slug}>{category.title}</button></li>
+      return <li key={category.slug}><button className={`category-button ${isActive}`} type="button" value={category.slug}>{category.title}</button></li>
     });
   };
 
@@ -25,6 +25,8 @@ const Header = ({ setActiveCategory, activeCategory }) => {
         <ul 
           id='category-buttons-container' 
           onClick={ (event) => {setActiveCategory(event.target.value)} }
+          data-aos='fade'
+          data-aos-delay='500'
         >
           {renderCategories()}
         </ul>

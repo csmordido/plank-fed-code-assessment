@@ -16,6 +16,18 @@ const App = () => {
     });
   }, []);
 
+  useEffect(() => {
+    const updateHtmlHeight = () => {
+      if (window.innerHeight > document.body.scrollHeight && activeCategory !== 'all') {
+        document.documentElement.style.height = '100%';
+      } else {
+        document.documentElement.style.height = '';
+      }
+    }
+
+    updateHtmlHeight();
+  }, [activeCategory]);
+
   return (
     <Wrapper>
       <Header 
