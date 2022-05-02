@@ -4,7 +4,7 @@ const EmptyCategory = ({ text }) => {
   return (
     <li 
       id='empty-category' 
-      data-aos='fade'
+      data-aos='fade-up'
     >
       <p>{text}</p>
     </li> 
