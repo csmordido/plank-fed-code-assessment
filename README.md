@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Plank Coding Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React web app previewing some of [Plank](https://plankdesign.com/en/)'s case studies.
 
-## Available Scripts
+## Created with:
 
-In the project directory, you can run:
+- [Sass](https://www.npmjs.com/package/sass)
 
-### `npm start`
+- [AOS](https://github.com/michalsnik/aos)
+  The Animate on Scroll library provides simple configurations for implementing scroll animations in React.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Axios](https://www.npmjs.com/package/axios)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Some Notes on the Approach:
 
-### `npm test`
+- Created the `useApiResponse` custom hook to reuse the API request logic. The hook takes in an `endpoint` string argument to customize the endpoint and access case studies and categories.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Utilized variable declaration in Sass to create more descriptive values that are easy to remember.
 
-### `npm run build`
+- The `activeCategory` state controls filtering of the case studies array. The state is updated with the slug property of the clicked button. When the state updates, the case studies array is filtered out with the items that have a matching slug property. The `activeCategory` state is also used to determine the active category button to add the 'active' class.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- For categories having few or no case studies, the HTML element's height needed to be set to 100% to attain a more pleasing layout. This was done by creating an `updateHtmlHeight` function inside the `useEffect` hook which fires when the `activeCategory` updates. The `updateHtmlHeight` function checks whether the html height is less than the window height and sets it to 100% if it's true.
